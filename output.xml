@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-11-11T16:08:03.883719" rpa="false" schemaversion="5">
+<suite id="s1" name="TC001" source="C:\Users\lenovo\PycharmProjects\RobotQA_ExcelData\TestCases\TC001.robot">
+<test id="s1-t1" name="Login and Logout Functionality" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:04.424753" level="INFO">Opening browser 'Chrome' to base url 'https://thetestingworld.com/'.</msg>
+<arg>${Var1}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-11T16:08:04.424753" elapsed="8.714152"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-11T16:08:13.139903" elapsed="0.091755"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:13.249615" level="INFO">Clicking element 'xpath://a[contains(text(),'Quick Demo')]'.</msg>
+<arg>xpath://a[contains(text(),'Quick Demo')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:13.248612" elapsed="0.395942"/>
+</kw>
+<kw name="Read Number of Rows" owner="UserKeywords">
+<kw name="Fetch Number Of Raws" owner="ReadData">
+<msg time="2024-11-11T16:08:13.647546" level="INFO">${maxr} = 5</msg>
+<var>${maxr}</var>
+<arg>${sheetname}</arg>
+<status status="PASS" start="2024-11-11T16:08:13.646549" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${maxr}</value>
+<status status="PASS" start="2024-11-11T16:08:13.647546" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:13.648543" level="INFO">${row} = 5</msg>
+<var>${row}</var>
+<arg>Sheet1</arg>
+<status status="PASS" start="2024-11-11T16:08:13.645551" elapsed="0.002992"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:13.656522" level="INFO">${cell_data} = abc@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:13.655524" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:13.656522" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:13.656522" level="INFO">${email} = abc@gmail.com</msg>
+<var>${email}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-11T16:08:13.655524" elapsed="0.000998"/>
+</kw>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:13.658517" level="INFO">${cell_data} = Mobile Automation</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:13.657519" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:13.658517" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:13.658517" level="INFO">${course} = Mobile Automation</msg>
+<var>${course}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-11T16:08:13.657519" elapsed="0.000998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:13.659514" level="INFO">Typing text 'abc@gmail.com' into text field 'id:wdform_2_element2'.</msg>
+<arg>id:wdform_2_element2</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:13.659514" elapsed="0.941483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:wdform_5_element2</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-11T16:08:14.600997" elapsed="0.031915"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:14.633910" level="INFO">Selecting options from selection list 'id:wdform_5_element2' by label Mobile Automation.</msg>
+<arg>id:wdform_5_element2</arg>
+<arg>${course}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-11T16:08:14.633910" elapsed="0.113696"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:14.748602" level="INFO">Clicking element 'xpath://button[@class="button-submit"]'.</msg>
+<arg>xpath://button[@class="button-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:14.748602" elapsed="0.743914"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-11T16:08:20.494658" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-11T16:08:15.493513" elapsed="5.001145"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-11T16:08:13.655524" elapsed="6.839134"/>
+</iter>
+<iter>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:20.496565" level="INFO">${cell_data} = abc1@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:20.495568" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:20.496565" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:20.497563" level="INFO">${email} = abc1@gmail.com</msg>
+<var>${email}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-11T16:08:20.495568" elapsed="0.001995"/>
+</kw>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:20.498560" level="INFO">${cell_data} = Security Testing</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:20.498560" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:20.498560" elapsed="0.001158"/>
+</return>
+<msg time="2024-11-11T16:08:20.499718" level="INFO">${course} = Security Testing</msg>
+<var>${course}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-11T16:08:20.497563" elapsed="0.002527"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:20.500554" level="INFO">Typing text 'abc1@gmail.com' into text field 'id:wdform_2_element2'.</msg>
+<arg>id:wdform_2_element2</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:20.500090" elapsed="0.135247"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:wdform_5_element2</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-11T16:08:20.636336" elapsed="0.017949"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:20.654285" level="INFO">Selecting options from selection list 'id:wdform_5_element2' by label Security Testing.</msg>
+<arg>id:wdform_5_element2</arg>
+<arg>${course}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-11T16:08:20.654285" elapsed="0.091755"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:20.747044" level="INFO">Clicking element 'xpath://button[@class="button-submit"]'.</msg>
+<arg>xpath://button[@class="button-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:20.747044" elapsed="1.076764"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-11T16:08:26.825135" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-11T16:08:21.823808" elapsed="5.001327"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-11T16:08:20.494658" elapsed="6.330477"/>
+</iter>
+<iter>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:26.826810" level="INFO">${cell_data} = abc2@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:26.825815" elapsed="0.000995"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:26.826810" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:26.826810" level="INFO">${email} = abc2@gmail.com</msg>
+<var>${email}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-11T16:08:26.825815" elapsed="0.000995"/>
+</kw>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:26.828803" level="INFO">${cell_data} = Mobile Automation</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:26.827805" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:26.828803" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:26.828803" level="INFO">${course} = Mobile Automation</msg>
+<var>${course}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-11T16:08:26.827805" elapsed="0.000998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:26.829802" level="INFO">Typing text 'abc2@gmail.com' into text field 'id:wdform_2_element2'.</msg>
+<arg>id:wdform_2_element2</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:26.828803" elapsed="0.151554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:wdform_5_element2</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-11T16:08:26.980357" elapsed="0.017950"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:26.998307" level="INFO">Selecting options from selection list 'id:wdform_5_element2' by label Mobile Automation.</msg>
+<arg>id:wdform_5_element2</arg>
+<arg>${course}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-11T16:08:26.998307" elapsed="0.089761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:27.089065" level="INFO">Clicking element 'xpath://button[@class="button-submit"]'.</msg>
+<arg>xpath://button[@class="button-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:27.088068" elapsed="0.908778"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-11T16:08:32.997716" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-11T16:08:27.996846" elapsed="5.001112"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-11-11T16:08:26.825815" elapsed="6.172143"/>
+</iter>
+<iter>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:32.999041" level="INFO">${cell_data} = abc3@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:32.998493" elapsed="0.000548"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:32.999041" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:32.999041" level="INFO">${email} = abc3@gmail.com</msg>
+<var>${email}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-11T16:08:32.998493" elapsed="0.000548"/>
+</kw>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:33.000126" level="INFO">${cell_data} = Security Testing</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:32.999587" elapsed="0.000539"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:33.000126" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:33.000126" level="INFO">${course} = Security Testing</msg>
+<var>${course}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-11T16:08:32.999587" elapsed="0.000539"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:33.000672" level="INFO">Typing text 'abc3@gmail.com' into text field 'id:wdform_2_element2'.</msg>
+<arg>id:wdform_2_element2</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:33.000126" elapsed="0.129954"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:wdform_5_element2</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-11T16:08:33.130080" elapsed="0.014960"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:33.145040" level="INFO">Selecting options from selection list 'id:wdform_5_element2' by label Security Testing.</msg>
+<arg>id:wdform_5_element2</arg>
+<arg>${course}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-11T16:08:33.145040" elapsed="0.080819"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:33.226863" level="INFO">Clicking element 'xpath://button[@class="button-submit"]'.</msg>
+<arg>xpath://button[@class="button-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:33.225859" elapsed="0.972355"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-11T16:08:39.199664" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-11T16:08:34.199211" elapsed="5.000453"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-11-11T16:08:32.997958" elapsed="6.202710"/>
+</iter>
+<iter>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:39.204555" level="INFO">${cell_data} = abc4@gmail.com</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:39.203556" elapsed="0.000999"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:39.204555" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:39.205553" level="INFO">${email} = abc4@gmail.com</msg>
+<var>${email}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-11T16:08:39.202512" elapsed="0.003041"/>
+</kw>
+<kw name="Read Excel data of cell" owner="UserKeywords">
+<kw name="Fetch Cell Data" owner="ReadData">
+<msg time="2024-11-11T16:08:39.207545" level="INFO">${cell_data} = Security Testing</msg>
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-11T16:08:39.206548" elapsed="0.000997"/>
+</kw>
+<return>
+<value>${cell_data}</value>
+<status status="PASS" start="2024-11-11T16:08:39.208545" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-11T16:08:39.209540" level="INFO">${course} = Security Testing</msg>
+<var>${course}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-11T16:08:39.205553" elapsed="0.003987"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:39.210538" level="INFO">Typing text 'abc4@gmail.com' into text field 'id:wdform_2_element2'.</msg>
+<arg>id:wdform_2_element2</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:39.209540" elapsed="0.163384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:wdform_5_element2</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-11T16:08:39.372924" elapsed="0.015664"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:39.388588" level="INFO">Selecting options from selection list 'id:wdform_5_element2' by label Security Testing.</msg>
+<arg>id:wdform_5_element2</arg>
+<arg>${course}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-11-11T16:08:39.388588" elapsed="0.082907"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-11T16:08:39.471495" level="INFO">Clicking element 'xpath://button[@class="button-submit"]'.</msg>
+<arg>xpath://button[@class="button-submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-11T16:08:39.471495" elapsed="6.670519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-11T16:08:51.143607" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-11T16:08:46.142913" elapsed="5.000694"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-11-11T16:08:39.201664" elapsed="11.941943"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${row}+1</value>
+<status status="PASS" start="2024-11-11T16:08:13.654527" elapsed="37.489080"/>
+</for>
+<status status="PASS" start="2024-11-11T16:08:04.423756" elapsed="46.720887"/>
+</test>
+<status status="PASS" start="2024-11-11T16:08:03.885714" elapsed="47.261885"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC001">TC001</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-11T16:08:04.165938" level="WARN">Error in file 'C:\Users\lenovo\PycharmProjects\RobotQA_ExcelData\Resources\UserKeywords.robot' on line 9: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-11T16:08:04.165938" level="WARN">Error in file 'C:\Users\lenovo\PycharmProjects\RobotQA_ExcelData\Resources\UserKeywords.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
